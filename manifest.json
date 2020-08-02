@@ -1,0 +1,22 @@
+{
+
+  "manifest_version": 2,
+  "name": "eBay Actual Sold Price",
+  "version": "1.0",
+
+  "description": "See the actual sold price of an item on eBay.",
+
+  "icons": {
+    "48": "icons/coins-icon.png",
+	"96": "icons/coins-icon.png",
+	"128": "icons/coins-icon.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.ebay.com/*","*://*.ebay.co.uk/*","*://*.ebay.es/*","*://*.ebay.ca/*","*://*.ebay.de/*","*://*.ebay.it/*"],
+      "js": ["ebayprice.js"]
+    }
+  ]
+
+}
