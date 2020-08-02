@@ -13,8 +13,8 @@ function init(){
 	if (res != null && res.length>1 && res[0].includes("taxExclusivePrice")){
 		
 		// check if best offer price is the same
-		var normPrice = /binPriceOnly(.*?),/.exec(html)
-		var offerPrice = /taxExclusivePrice(.*?),/.exec(html)		
+		var normPrice = /binPriceOnly(.*?)\",/.exec(html);
+		var offerPrice = /taxExclusivePrice(.*?)\",/.exec(html);		
 		
 		var finalPrice = res[1].replace("\"","").replace(":\"","");
 		var finalHtml = "";
